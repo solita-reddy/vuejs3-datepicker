@@ -149,6 +149,41 @@ const es = (): ILocale => {
   };
 };
 
+const fi = (): ILocale => {
+  const langName = 'Finnish';
+  const monthFullName = [
+    'Tammikuu',
+    'Helmikuu',
+    'Maaliskuu',
+    'Huhtikuu',
+    'Toukokuu',
+    'Kesäkuu',
+    'Heinäkuu',
+    'Elokuu',
+    'Syyskuu',
+    'Lokakuu',
+    'Marraskuu',
+    'Joulukuu',
+  ];
+  const shortName = ['Tam', 'Tam', 'Maa', 'Huh', 'Tou', 'Kes', 'Hei', 'Elo', 'Syy', 'Lok', 'Mar', 'Jou'];
+  const days = ['Su', 'Ma', 'Ti', 'Ke', 'To', 'Pe', 'La'];
+  const daysNames = ['Sunnuntai', 'Maanantai', 'Tiistai', 'Keskiviikko', 'Torstai', 'Perjantai', 'Lauantai'];
+  const rtl = false;
+  const ymd = false;
+  const yearSuffix = '';
+  return {
+    months: monthFullName,
+    monthsAbbr: shortName,
+    days,
+    language: langName,
+    yearSuffix,
+    ymd,
+    rtl,
+    langName,
+    daysNames,
+  };
+};
+
 const fr = (): ILocale => {
   const langName = 'Français';
   const monthFullName = [
@@ -548,6 +583,7 @@ export const data = {
   de: de(),
   en: en(),
   es: es(),
+  fi: fi(),
   fr: fr(),
   nl: nl(),
   pt: pt(),
